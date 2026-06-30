@@ -1,0 +1,15 @@
+# --- Confidential client documents — never publish to the repo ---
+/PrimeVolt Energy Systems.pdf
+/Certificate of Incorporation.pdf
+
+# --- Python / build artifacts ---
+__pycache__/
+*.pyc
+build-tools/*.png
+build-tools/mobile-menu.png
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

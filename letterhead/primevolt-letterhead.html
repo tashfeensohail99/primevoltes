@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PrimeVolt Energy Systems — Letterhead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0C2747; --navy2:#0D2C4D; --ink:#1B2A3A; --blue:#1FA85C; --cyan:#34D17E;
+    --gold:#E9A93B; --gold2:#F59E0B; --slate:#5B7185; --line:#E2E9F1; --paper:#FFFFFF;
+  }
+  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{margin:0;padding:0}
+  body{background:#8a93a0;font-family:'Inter',system-ui,sans-serif;color:var(--ink)}
+  @page{size:A4;margin:0}
+  .page{
+    position:relative;width:210mm;min-height:297mm;background:var(--paper);
+    margin:0 auto;overflow:hidden;display:flex;flex-direction:column;
+  }
+  @media print{ body{background:#fff} .page{margin:0;box-shadow:none} }
+  @media screen{ .page{box-shadow:0 10mm 30mm rgba(0,0,0,.28);margin:16mm auto} }
+
+  /* ---- decorative corner grid (top-right) ---- */
+  .corner{position:absolute;top:0;right:0;width:78mm;height:48mm;opacity:.5;pointer-events:none}
+  /* ---- faint watermark ---- */
+  .watermark{position:absolute;top:120mm;left:50%;transform:translateX(-50%);width:115mm;opacity:.05;pointer-events:none}
+
+  /* ---- HEADER ---- */
+  .header{padding:15mm 18mm 0 18mm;display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}
+  .brand{display:flex;align-items:center;gap:5mm}
+  .brand .emblem{width:17mm;height:17mm;flex:none}
+  .wm{font-family:'Sora',sans-serif;font-weight:800;letter-spacing:-.5px;line-height:.95;font-size:25pt}
+  .wm .p{color:var(--navy)} .wm .v{color:var(--blue)}
+  .wm-tag{font-family:'Sora',sans-serif;font-weight:600;letter-spacing:.36em;font-size:7pt;color:var(--slate);margin-top:2.4mm}
+  .head-right{text-align:right;padding-top:1.5mm}
+  .head-right .ov{font-family:'Sora',sans-serif;font-weight:700;font-size:7.2pt;letter-spacing:.22em;color:var(--navy);text-transform:uppercase}
+  .head-right .svc{font-size:7.6pt;color:var(--slate);margin-top:2mm;line-height:1.5;letter-spacing:.02em}
+  .goldrule{width:14mm;height:2.2px;background:linear-gradient(90deg,var(--gold2),var(--gold));margin:3mm 0 0 auto;border-radius:2px}
+
+  /* full-width hairline under header */
+  .rule{margin:9mm 18mm 0 18mm;height:1.6px;background:linear-gradient(90deg,var(--navy) 0%,var(--blue) 42%,var(--cyan) 60%,var(--gold) 100%);opacity:.9;position:relative;z-index:2}
+
+  /* ---- BODY ---- */
+  .body{flex:1 1 auto;padding:11mm 18mm 8mm 18mm;position:relative;z-index:2;font-size:10.5pt;line-height:1.7;color:#27384a}
+  .meta-date{color:var(--slate);font-size:10pt;margin-bottom:7mm}
+  .recipient{margin-bottom:6mm;line-height:1.55}
+  .recipient .nm{font-weight:600;color:var(--ink)}
+  .subject{font-family:'Sora',sans-serif;font-weight:700;color:var(--navy);font-size:11pt;margin:0 0 5mm}
+  .body p{margin:0 0 4.2mm}
+  .sign{margin-top:9mm}
+  .sign .sig{font-family:'Sora',sans-serif;font-weight:700;color:var(--navy);font-size:12.5pt}
+  .sign .ttl{color:var(--slate);font-size:9.5pt;margin-top:1mm}
+  .sample-flag{position:absolute;top:11mm;right:18mm;font-size:7pt;letter-spacing:.18em;color:#9fb0c2;text-transform:uppercase}
+
+  /* ---- FOOTER ---- */
+  .footer{margin-top:auto;position:relative;z-index:2}
+  .foot-band{background:linear-gradient(105deg,#0B2342 0%,#0C2747 55%,#0E3257 100%);color:#DCE7F2;padding:6.5mm 18mm 6mm}
+  .foot-top{height:2.2px;background:linear-gradient(90deg,var(--gold2),var(--gold) 40%,transparent);opacity:.95}
+  .foot-grid{display:flex;justify-content:space-between;gap:6mm}
+  .fcol{display:flex;align-items:flex-start;gap:2.6mm;font-size:8.6pt;line-height:1.5;max-width:58mm}
+  .fcol svg{width:4.4mm;height:4.4mm;flex:none;margin-top:.4mm}
+  .fcol .k{color:#7FA8D0;font-family:'Sora',sans-serif;font-weight:600;letter-spacing:.12em;font-size:6.6pt;text-transform:uppercase;display:block;margin-bottom:.6mm}
+  .fcol a{color:#DCE7F2;text-decoration:none}
+  .foot-sub{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.12);margin-top:4.5mm;padding-top:3mm;font-size:7.4pt;color:#8FB0CE;letter-spacing:.04em}
+  .foot-sub .reg b{color:#CFE0F0;font-weight:600}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- corner grid motif -->
+  <svg class="corner" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#1FA85C" stroke-opacity=".5" stroke-width="1">
+      <line x1="40" y1="-10" x2="270" y2="40"/><line x1="70" y1="-20" x2="280" y2="70"/>
+      <line x1="110" y1="-20" x2="290" y2="100"/><line x1="150" y1="-20" x2="285" y2="135"/>
+    </g>
+    <g fill="#E9A93B"><circle cx="180" cy="34" r="2.4"/><circle cx="216" cy="62" r="2.4"/><circle cx="232" cy="96" r="2.4"/><circle cx="208" cy="20" r="2"/></g>
+    <g fill="#1FA85C" fill-opacity=".6"><circle cx="150" cy="22" r="1.8"/><circle cx="120" cy="44" r="1.8"/><circle cx="186" cy="120" r="1.8"/></g>
+  </svg>
+
+  <!-- watermark emblem (faint tower + bolt) -->
+  <svg class="watermark" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#0C2747" stroke-width="2.4" stroke-linecap="round" fill="none"><path d="M40 100 L55 38"/><path d="M80 100 L65 38"/><path d="M55 38 L60 24 L65 38"/><path d="M31 70 H89"/><path d="M37 56 H83"/><path d="M43 44 H77"/><path d="M45 96 L74 80 M75 96 L46 80 M48 78 L72 66 M73 78 L49 66"/></g>
+    <line x1="12" y1="100" x2="108" y2="100" stroke="#0C2747" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M67 30 L49 66 H60 L54 98 L77 58 H64 L73 30 Z" fill="#0C2747"/>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <svg class="emblem" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="eA" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0382F"/><stop offset="1" stop-color="#F58233"/></linearGradient>
+          <linearGradient id="eB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD23F"/><stop offset="1" stop-color="#F5A100"/></linearGradient>
+        </defs>
+        <path d="M18 100 A42 42 0 0 1 102 100 Z" fill="url(#eA)"/>
+        <g stroke="#E0382F" stroke-width="2.4" stroke-linecap="round" opacity=".8"><line x1="60" y1="40" x2="60" y2="30"/><line x1="34" y1="52" x2="27" y2="46"/><line x1="86" y1="52" x2="93" y2="46"/></g>
+        <line x1="12" y1="100" x2="108" y2="100" stroke="#0C2747" stroke-width="2.6" stroke-linecap="round"/>
+        <g stroke="#16335A" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M40 100 L55 38"/><path d="M80 100 L65 38"/><path d="M55 38 L60 24 L65 38"/><path d="M60 38 L60 24"/><path d="M31 70 H89"/><path d="M37 56 H83"/><path d="M43 44 H77"/><path d="M45 96 L74 80 M75 96 L46 80 M48 78 L72 66 M73 78 L49 66 M51 64 L69 54 M70 64 L52 54"/></g>
+        <path d="M67 30 L49 66 H60 L54 98 L77 58 H64 L73 30 Z" fill="url(#eB)" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="wm"><span class="p">PRIME</span><span class="v">VOLT</span></div>
+        <div class="wm-tag">ENERGY&nbsp;SYSTEMS</div>
+      </div>
+    </div>
+    <div class="head-right">
+      <div class="ov">Power Transmission &amp; Grid Modernization</div>
+      <div class="svc">High-Voltage Transmission Support<br>Grid Maintenance · Smart-Grid Integration</div>
+      <div class="goldrule"></div>
+    </div>
+  </header>
+
+  <div class="rule"></div>
+
+  <!-- BODY (sample letter — replace with your content) -->
+  <main class="body">
+    <div class="sample-flag">Sample letter · template</div>
+    <div class="meta-date">21 May 2026</div>
+
+    <div class="recipient">
+      <div class="nm">Mr. John Patterson</div>
+      Director, Capital Projects<br>
+      Northbridge Utilities Inc.<br>
+      120 Front Street West, Toronto, ON&nbsp;&nbsp;M5J 1E3
+    </div>
+
+    <p class="subject">Re: Transmission Maintenance Coordination &amp; Technical Support Services</p>
+
+    <p>Dear Mr. Patterson,</p>
+
+    <p>Thank you for the opportunity to introduce <strong>PrimeVolt Energy Systems</strong>, an Ontario-based power-infrastructure firm specializing in high-voltage transmission line support, grid maintenance coordination, smart-grid integration, and modernization advisory services.</p>
+
+    <p>Backed by more than two decades of senior experience delivering 132&nbsp;kV–500&nbsp;kV transmission and grid-station projects, we help utilities, EPC contractors, and industrial clients improve project readiness, inspection follow-up, technical documentation, and maintenance planning — with the responsiveness and accountability of a specialist, founder-led team.</p>
+
+    <p>I would welcome the chance to discuss how PrimeVolt can support Northbridge Utilities' upcoming reinforcement and modernization programs. Please feel free to reach me directly at the contact details below.</p>
+
+    <div class="sign">
+      <p style="margin:0 0 6mm">Sincerely,</p>
+      <div class="sig">Rana Muhammad Zahid Hafeez</div>
+      <div class="ttl">Founder &amp; Principal Consultant — PrimeVolt Energy Systems Limited</div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="foot-top"></div>
+    <div class="foot-band">
+      <div class="foot-grid">
+        <div class="fcol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E9A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><span class="k">Location</span>Greater Toronto Area<br>Ontario, Canada</div>
+        </div>
+        <div class="fcol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E9A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z"/></svg>
+          <div><span class="k">Telephone</span><a href="tel:+14375592990">+1 (437) 559-2990</a></div>
+        </div>
+        <div class="fcol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E9A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+          <div><span class="k">Email</span><a href="mailto:info@primevoltes.ca">info@primevoltes.ca</a></div>
+        </div>
+        <div class="fcol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E9A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20Z"/></svg>
+          <div><span class="k">Web</span><a href="https://www.primevoltes.ca">www.primevoltes.ca</a></div>
+        </div>
+      </div>
+      <div class="foot-sub">
+        <div class="reg">PrimeVolt Energy Systems Limited &nbsp;·&nbsp; <b>Ontario Corporation No. 1001613569</b></div>
+        <div>Reliable&nbsp;·&nbsp;Modern&nbsp;·&nbsp;Sustainable Power Infrastructure</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

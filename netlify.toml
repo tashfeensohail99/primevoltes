@@ -1,0 +1,26 @@
+# Repo-root deploy config for Netlify / Cloudflare Pages.
+# The deployable site lives in the `website/` folder.
+#   • Netlify: this file is picked up automatically (publish = "website").
+#   • Cloudflare Pages: set "Build output directory" = website (no build command).
+#   • GitHub Pages: handled by .github/workflows/deploy-pages.yml.
+
+[build]
+  publish = "website"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
